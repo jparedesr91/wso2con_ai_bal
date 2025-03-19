@@ -2,13 +2,13 @@ import ballerinax/openai.chat;
 import ballerina/http;
 import ballerina/log;
 
-configurable string openai = ?;
+configurable string token = ?;
 
 listener http:Listener httpDefaultListener = http:getDefaultListener();
 
 service / on httpDefaultListener {
     
-    resource function get convert(string 'from = "ES", string to = "EN", string sentence = "Buenos Dias") returns json|error {
+    resource function get translate(string 'from = "ES", string to = "EN", string sentence = "Buenos Dias") returns json|error {
 
         final chat:Client openAIChat = check new ({auth: {token}});
 
