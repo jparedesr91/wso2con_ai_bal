@@ -1,0 +1,4 @@
+[package]
+org = "aragorn"
+name = "wso2con_ai_bal"
+version = "0.1.0"
