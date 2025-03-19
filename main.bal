@@ -2,7 +2,7 @@ import ballerinax/openai.chat;
 import ballerina/http;
 import ballerina/log;
 
-configurable string token = "";
+configurable string openai = ?;
 
 listener http:Listener httpDefaultListener = http:getDefaultListener();
 
